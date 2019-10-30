@@ -62,7 +62,7 @@ sudo ufw allow http
 # port 443
 sudo ufw allow https
 ```
-## Install and configure NGINX
+### Install and configure NGINX
 ```
 sudo apt install nginx
 sudo nano /etc/nginx/sites-available/default
@@ -88,7 +88,7 @@ sudo nginx -t
 ```
 > return OK
 
-### Restart NGINX; check status
+### Restart NGINX and ensure running - done
 ```
 sudo service nginx restart
 sudo systemctl status nginx
