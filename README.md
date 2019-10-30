@@ -13,9 +13,10 @@ Documentation of various nginx configuration and deployment.
 
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install nodejs
+sudo apt-get install -y nodejs
 node --version
 ```
+
 ## Configure firewall
 ```
 sudo ufw enable
@@ -48,7 +49,7 @@ sudo nano /etc/nginx/sites-available/default
         proxy_cache_bypass $http_upgrade;
     }
 ```
-> Replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. Change PORT to your app's PORT.
+> Change PORT to your app's PORT. Optional: replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. 
 
 # Check NGINX config
 ```
