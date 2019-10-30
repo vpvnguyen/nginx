@@ -1,6 +1,7 @@
 # NGINX + Node.js
-Documentation of various nginx configuration and deployment.
-Supported:
+Documentation of various nginx configuration and deployment for Node.js.
+
+Supported guides:
 - AWS EC2 Ubuntu 16.04
 
 # AWS EC2 Ubuntu 16.04
