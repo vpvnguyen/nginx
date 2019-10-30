@@ -8,6 +8,9 @@ Documentation of various nginx configuration and deployment.
 - Under Configure Security Group, add rules: `HTTP` & `HTTPS`
 
 ## Install Node.js
+- ssh into your EC2 instance
+> `ssh -i YOUR_KEY.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS`
+
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs
@@ -17,12 +20,15 @@ node --version
 ```
 sudo ufw enable
 sudo ufw status
+
+// port 22
 sudo ufw allow ssh
-> (Port 22)
+
+// port 80
 sudo ufw allow http
-> (Port 80)
+
+// port 443
 sudo ufw allow https
-> (Port 443)
 ```
 ## Install and configure NGINX
 ```
@@ -45,7 +51,9 @@ sudo nano /etc/nginx/sites-available/default
 > Replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. Change PORT to your app's PORT.
 
 # Check NGINX config
-`sudo nginx -t`
+```
+sudo nginx -t
+```
 > return OK
 
 # Restart NGINX; check status
