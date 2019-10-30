@@ -2,9 +2,10 @@
 Documentation of various nginx configuration and deployment for Node.js.
 
 Supported guides:
-- AWS EC2 Ubuntu 16.04
+- AWS EC2 Ubuntu 18.04 (Bionic)
+- AWS EC2 Ubuntu 16.04 (Xenial)
 
-# AWS EC2 Ubuntu 16.04
+# AWS EC2 Ubuntu 18.04, 16.04
 - Open your AWS dashboard and create an AWS EC2 Ubuntu server.
 - Leave all settings default EXCEPT for Configure Security Group.
 - Under Configure Security Group, add rules: `HTTP` & `HTTPS`
@@ -112,4 +113,71 @@ sudo service nginx restart
 # show firewall status
 sudo ufw status
 
+```
+
+# Databases
+Supported:
+- MongoDB
+- PostgreSQL
+
+## MongoDB
+source: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+> Default PORT: 27017
+
+- Import the public key used by the package management system.
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+```
+- Create a list file for MongoDB.
+```
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+```
+- Reload local package database.
+```
+sudo apt-get update
+```
+- Install the MongoDB packages.
+```
+sudo apt-get install -y mongodb-org
+```
+### MongoDB Service Commands
+```
+sudo service mongod start
+sudo service mongod stop
+sudo service mongod restart
+```
+- Start mongo shell on same host machine as the mongod.
+```
+mongo
+```
+## PostgreSQL
+source: https://tecadmin.net/install-postgresql-server-on-ubuntu/
+
+### Enable PostgreSQL Apt Repository
+- Import GPG key for PostgreSQL packages.
+```
+sudo apt-get install wget ca-certificates
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+```
+- Add the repository to your system:
+```
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+```
+### Install PostgreSQL on Ubuntu
+```
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+```
+### Connect to PostgreSQL
+```
+sudo su - postgres
+psql
+```
+- Check login:
+```
+postgres-# \conninfo
+```
+- Disconnect from PostgreSQL:
+```
+postgres-# \q
 ```
