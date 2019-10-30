@@ -22,6 +22,7 @@ ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 ### Install Node.js
+- Example uses v12.x. Check for up to date version: https://deb.nodesource.com/
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
