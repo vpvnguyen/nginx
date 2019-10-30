@@ -22,13 +22,13 @@ ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS
 ```
 sudo apt-get update && sudo apt-get upgrade -y
 ```
-## Install Node.js
+### Install Node.js
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
 ```
-## Install PM2 - process manager for your Node.js app
+### Install PM2 - process manager for your Node.js app
 ```
 sudo npm i pm2 -g
 pm2 start YOUR_APP_FILENAME
@@ -48,7 +48,7 @@ pm2 flush
 # To make sure app starts when reboot
 pm2 startup ubuntu
 ```
-## Configure firewall
+### Configure firewall
 ```
 sudo ufw enable
 sudo ufw status
@@ -82,18 +82,18 @@ sudo nano /etc/nginx/sites-available/default
 ```
 > Change PORT to your app's PORT. Optional: replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. 
 
-## Check NGINX config
+### Check NGINX config
 ```
 sudo nginx -t
 ```
 > return OK
 
-## Restart NGINX; check status
+### Restart NGINX; check status
 ```
 sudo service nginx restart
 sudo systemctl status nginx
 ```
-## Common commands
+### Common commands
 ```
 # check nginx status
 sudo systemctl status nginx
