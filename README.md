@@ -13,12 +13,11 @@ Supported:
 ```
 chmod 400 ./YOUR_KEY_PAIR_NAME.pem
 ```
-- SSH into your EC2 instance
+- SSH into your EC2 instance.
 ```
 ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS
 ```
-
-- Update the server
+- Update the server.
 ```
 sudo apt-get update && sudo apt-get upgrade -y
 ```
@@ -26,7 +25,6 @@ sudo apt-get update && sudo apt-get upgrade -y
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
-node --version
 ```
 ### Install PM2 - process manager for your Node.js app
 ```
@@ -39,10 +37,10 @@ pm2 status YOUR_APP_FILENAME
 pm2 restart YOUR_APP_FILENAME
 pm2 stop YOUR_APP_FILENAME
 
-(Show log stream)
+# Show log stream
 pm2 logs
 
-(Clear logs)
+# Clear logs
 pm2 flush
 
 # To make sure app starts when reboot
