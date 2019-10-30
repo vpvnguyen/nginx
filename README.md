@@ -8,24 +8,27 @@ Documentation of various nginx configuration and deployment.
 - Under Configure Security Group, add rules: `HTTP` & `HTTPS`
 
 ## Install Node.js
-`curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
-`sudo apt install nodejs`
-`node --version`
-
+```
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install nodejs
+node --version
+```
 ## Configure firewall
-`sudo ufw enable`
-`sudo ufw status`
-`sudo ufw allow ssh`
+```
+sudo ufw enable
+sudo ufw status
+sudo ufw allow ssh
 > (Port 22)
-`sudo ufw allow http`
+sudo ufw allow http
 > (Port 80)
-`sudo ufw allow https`
+sudo ufw allow https
 > (Port 443)
-
+```
 ## Install and configure NGINX
-`sudo apt install nginx`
-`sudo nano /etc/nginx/sites-available/default`
-
+```
+sudo apt install nginx
+sudo nano /etc/nginx/sites-available/default
+```
 - Navigate to this section of `default.conf`; configure domain and reverse proxy.
 ```
     server_name yourdomain.com www.yourdomain.com;
@@ -46,5 +49,7 @@ Documentation of various nginx configuration and deployment.
 > return OK
 
 # Restart NGINX; check status
-`sudo service nginx restart`
-`sudo systemctl status nginx`
+```
+sudo service nginx restart
+sudo systemctl status nginx
+```
