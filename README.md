@@ -13,7 +13,9 @@ Documentation of various nginx configuration and deployment.
 chmod 400 ./YOUR_KEY_PAIR_NAME.pem
 ```
 - SSH into your EC2 instance
-> `ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS`
+```
+ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS
+```
 
 - Update the server
 ```
