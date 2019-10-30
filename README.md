@@ -12,7 +12,7 @@ Supported guides:
 - Create and download a new key pair to SSH into EC2 instance.
 - Navigate to your key pair file location and run:
 ```
-chmod 400 ./YOUR_KEY_PAIR_NAME.pem
+chmod 400 ./YOUR_KEY_PAIR.pem
 ```
 - SSH into your EC2 instance.
 ```
