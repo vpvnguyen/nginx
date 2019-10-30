@@ -22,7 +22,8 @@ ssh -i YOUR_KEY_PAIR.pem ubuntu@YOUR_EC2_PUBLIC_DNS_ADDRESS
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 ### Install Node.js
-- Example uses v12.x. Check for up to date version: https://deb.nodesource.com/.
+- Example uses v12.x. 
+- Check for up to date version: https://deb.nodesource.com/
 ```
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -81,13 +82,11 @@ sudo nano /etc/nginx/sites-available/default
 ```
 > Change PORT to your app's PORT. Optional: replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. 
 
-### Check NGINX config
+### Check config and restart NGINX
 ```
 sudo nginx -t
 ```
 > return OK
-
-### Restart NGINX and ensure running - done
 ```
 sudo service nginx restart
 sudo systemctl status nginx
