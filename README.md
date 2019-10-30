@@ -5,7 +5,7 @@ Documentation of various nginx configuration and deployment.
 # AWS EC2 Ubuntu 16.04
 - Open your AWS dashboard and create an AWS EC2 Ubuntu server.
 - Leave all settings default EXCEPT for Configure Security Group.
-- Add rules: `HTTP` & `HTTPS`
+- Under Configure Security Group, add rules: `HTTP` & `HTTPS`
 
 ## Install Node.js
 `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
