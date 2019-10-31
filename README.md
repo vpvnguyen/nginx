@@ -6,12 +6,15 @@ Supported guides:
 - AWS EC2 Ubuntu 16.04 (Xenial)
 
 # AWS EC2 Ubuntu 18.04, 16.04
-- Open your AWS dashboard and create an AWS EC2 Ubuntu server.
-- Leave all settings default EXCEPT for Configure Security Group.
+- Open your AWS dashboard and create an AWS EC2 Ubuntu instance.
+![](./demo/aws-ec2-1.gif)
+
+- Go through all options and leave all settings as default EXCEPT for Configure Security Group.
 - Under Configure Security Group, add rules: `HTTP` & `HTTPS`
+![](./demo/aws-ec2-2.gif)
 
 - Create and download a new key pair to SSH into EC2 instance.
-- Navigate to your key pair file location and run:
+- Navigate to your downloaded key pair file location and run:
 ```
 chmod 400 ./YOUR_KEY_PAIR.pem
 ```
