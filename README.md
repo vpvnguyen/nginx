@@ -10,7 +10,7 @@ Supported guides:
 2. Open your AWS dashboard and create an AWS EC2 Ubuntu instance.
 ![](./demo/aws-ec2-1.gif)
 
-3. Go through all options and leave all settings as default EXCEPT for Configure Security Group.
+3. Go through all options and leave all settings as default **EXCEPT** for **Configure Security Group**.
 4. Under Configure Security Group, add rules: `HTTP` & `HTTPS`
 ![](./demo/aws-ec2-2.gif)
 
@@ -73,7 +73,7 @@ sudo ufw allow https
 sudo apt install nginx
 sudo nano /etc/nginx/sites-available/default
 ```
-- Navigate to this section of `default.conf`; configure domain and reverse proxy.
+- Navigate to this section of the `default.conf` to  configure your domain and reverse proxy.
 ```
     server_name yourdomain.com www.yourdomain.com;
 
@@ -86,7 +86,7 @@ sudo nano /etc/nginx/sites-available/default
         proxy_cache_bypass $http_upgrade;
     }
 ```
-> Change PORT to your app's PORT. Optional: replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. 
+> **Change PORT to your app's PORT.** Optional: replace `yourdomain.com` & `www.yourdomain.com` with your own domain name. 
 
 ### Check config and restart NGINX
 ```
@@ -97,6 +97,7 @@ sudo nginx -t
 sudo service nginx restart
 sudo systemctl status nginx
 ```
+> return NGINX is active running
 ### Common commands
 ```
 # check nginx status
@@ -127,7 +128,7 @@ Supported:
 ## MongoDB
 source: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 > Default PORT: 27017
-
+> Guide uses mongo v4.2. See https://docs.mongodb.com/manual/release-notes/ for latest releases.
 1. Import the public key used by the package management system.
 ```
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
