@@ -15,6 +15,7 @@ Supported guides:
 ![](./demo/aws-ec2-2.gif)
 
 5. Create and download a new key pair to SSH into EC2 instance.
+> **IMPORTANT:** Save this key.pem safely. This is your key to SSH into your EC2 instance.
 6. Navigate to your downloaded key pair file location and run:
 ```
 chmod 400 ./YOUR_KEY_PAIR.pem
