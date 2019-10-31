@@ -6,6 +6,7 @@ Supported guides:
 - AWS EC2 Ubuntu 16.04 (Xenial)
 
 # AWS EC2 Ubuntu 18.04, 16.04
+- Register for an AWS Developer Account: https://aws.amazon.com/
 - Open your AWS dashboard and create an AWS EC2 Ubuntu instance.
 ![](./demo/aws-ec2-1.gif)
 
