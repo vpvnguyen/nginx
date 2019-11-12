@@ -8,12 +8,8 @@ Supported guides:
 # AWS EC2 Ubuntu 18.04, 16.04
 1. Register for an AWS Developer Account: https://aws.amazon.com/
 2. Open your AWS dashboard and create an AWS EC2 Ubuntu instance.
-![](./demo/aws-ec2-1.gif)
-
 3. Go through all options and leave all settings as default **EXCEPT** for **Configure Security Group**.
-4. Under Configure Security Group, add rules: `HTTP` & `HTTPS`
-![](./demo/aws-ec2-2.gif)
-
+4. Under Configure Security Group, add rules: `HTTP` & `HTTPS`.
 5. Create and download a new key pair to SSH into EC2 instance.
 > **IMPORTANT:** Save this key.pem safely. This is your key to SSH into your EC2 instance.
 6. Navigate to your downloaded key pair file location and run:
